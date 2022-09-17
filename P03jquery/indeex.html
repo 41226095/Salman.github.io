@@ -1,0 +1,150 @@
+<h2>List 5 Teman</h2>
+
+<p>Nama : Salman Abdullah Al Baaqir</p>
+<p>NIM: 41226095</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+		h2{
+  color: white;
+  cusor: pointer;
+  transition: 0.2s;
+  text-align: center;
+  font-size: 40px;
+}
+p{
+	text-align: center;
+	color: whitesmoke;
+	font-size: 20px;
+}
+	td {
+	border: 1px solid blue;
+	padding: 10px;
+	text-align: center;
+	}
+	td {
+		background: white;
+		text-align: center;
+		color: blac;
+	}
+	td:hover{
+		background: grey;
+		text-align: center;
+	}
+	tr{
+		color: black;
+		background: blue;
+		width: 100px;
+		font-size: 20px;
+		border-width: 40px;
+		text-align: center;
+		padding: 90px;
+	}
+	.tabelku {
+		width: 100%;
+		max-width: 500%;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	body{
+		background: grey;
+	}
+
+</style>
+
+<table class="tabelku">
+	<tr>
+		<th>No</th>
+		<th>Nama</th>
+		<th>Alamat</th>
+		<th>Aksi</th>
+	</tr> 
+
+	<tr id="row__1">
+		<td>1</td>
+		<td class="nama_mhs">Ikbal </td>
+		<td class="alamat">Indramayu</td>
+		<td class="hapus" id="hapus__1">Hapus</td>
+	</tr>
+
+	<tr id="row__2">
+		<td>2</td>
+		<td class="nama_mhs">Ari</td>
+		<td class="alamat">Klayan</td>
+		<td class="hapus" id="hapus__2">Hapus</td>
+	</tr>
+
+	<tr id="row__3">
+		<td>3</td>
+		<td class="nama_mhs">Rafi</td>
+		<td class="alamat">Permata</td>
+				<td class="hapus" id="hapus__3">Hapus</td>
+	</tr>
+
+	<tr id="row__4">
+		<td>4</td>
+		<td class="nama_mhs">Sayyid</td>
+		<td class="alamat">Tanggerang</td>
+		<td class="hapus" id="hapus__4">Hapus</td>
+	</tr>
+
+	<tr id="row__5">
+		<td>5</td>
+		<td class="nama_mhs">Agnes</td>
+		<td class="alamat">Majalengka</td>
+		<td class="hapus" id="hapus__4">Hapus</td>
+	</tr>
+
+</table>
+
+<script>
+	$(document).ready(function(){
+		//alert(0)
+		$('.nama_mhs').click(function(){
+			//alert(1)
+
+			let isi = $(this).text();
+			//alert(isi);
+
+			let isi2 = prompt('Ubah dengan :', isi);
+			if(!isi2) return;
+			//alert(isi2);
+
+			$(this).text(isi2);
+		})
+
+		$('.alamat').click(function(){
+			//alert(1)
+
+			let isi = $(this).text();
+			//alert(isi);
+
+			let isi2 = prompt('Ubah dengan :', isi);
+			if(!isi2) return;
+			//alert(isi2);
+
+			$(this).text(isi2);
+		})
+
+		$('.hapus').click(function(){
+			//alert(1)
+
+			let yakin = confirm('Yakin mau menghapus?');
+			if(!yakin) return;
+
+			let id = $(this).prop('id');
+			//alert(id);
+
+			let rid = id.split('__');
+			let baris_ke = rid[1];
+
+			//alert(baris_ke);
+
+			$('#row__'+baris_ke).slideUp()
+
+			//alert('Anda Yakin')
+			
+		})
+	})
+</script>
