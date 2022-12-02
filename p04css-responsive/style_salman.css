@@ -1,0 +1,114 @@
+body {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   background-color: #eaf3ff;
+   font-size: 12.5px;
+   height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+body a {
+   color: #202020;
+}
+body a:hover {
+   color: blue;
+   text-decoration: none;
+}
+
+.image-header {
+  width: 100%;
+  height: auto;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-header img {
+  width: 100%;
+  height: auto;
+}
+.top-bar {
+   background-color:#018573;
+   color: #86bf98;
+   font-size: 14px;
+   padding: 16px 0 0;
+}
+.top-bar a {
+   color:#5e3131;
+}
+.top-bar a:hover {
+   color: #68c70f;
+}
+.top-bar i {
+   margin-right: 5px;
+}
+.page-title {
+    font-weight: ;
+    border-bottom: 2px solid #895bd9;
+    margin-bottom: 15px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-top: 0px
+px
+;
+}
+select:hover {
+  background-color: #65a4b5;
+}
+
+option:hover {
+  background-color: #65a4b5;
+}
+
+input:hover {
+  background-color: #65a4b5;
+}
+
+textarea:hover {
+  background-color: #65a4b5;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+button {
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+@media (max-width: 480px){
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .label{
+        float: none;
+        width: 100%;
+    }
+    .input{
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.daftar{
+    width: 100%;
+    height: 25px;
+    padding: 1px 0;
+    background-color:white;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
